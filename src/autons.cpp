@@ -143,15 +143,15 @@ Piston1.set(true);
 chassis.drive_max_voltage = 5;
 Intake.spin(fwd);
 chassis.drive_timeout = 900;
-chassis.drive_distance(21);   //20.5
+chassis.drive_distance(21);   
 chassis.drive_timeout = 1500;
 TM.set(true);
 chassis.drive_max_voltage = 8;
 wait(.5,sec);
 
-chassis.turn_to_point(-41.8,-46.5,200); //190 deg
+chassis.turn_to_point(-41.8,-46.5,200); 
 // Piston2.set(false);
-chassis.drive_distance(-25.5); //-25
+chassis.drive_distance(-25.5); 
 wait(.1,sec);
 chassis.turn_to_point(-26,-46.6,90);
 wait(.1,sec);
@@ -164,6 +164,8 @@ Intake2.spin(fwd);
 wait(3,sec);
 
 }
+
+//This is for matchload not ready
 
 // Intake2.stop();
 // TM.set(true);
@@ -180,7 +182,8 @@ wait(3,sec);
 // Intake2.spin(fwd);
 // chassis.drive_stop(brake);
 
-
+//------------------------------------------
+//NOT TESTED AUTON 5
 
 // void Auton_5(){
 // odom_constants();
@@ -234,7 +237,10 @@ wait(3,sec);
 // chassis.drive_distance(-10);
 // Intake2.spin();
 
+//------------------------------------------
 
+
+//Skills Park 20 pts
 
 void Park(){
 odom_constants();
@@ -259,7 +265,7 @@ chassis.drive_stop(brake);
 }
 
 
-//RED LEFT & BLUE LEFT
+//RED LEFT & BLUE LEFT AUTON 3 BLOCK
 
 void Auton_RBLT(){
 odom_constants();
@@ -290,6 +296,9 @@ Intake2.spin(fwd);
 
 wait(3,sec);
 
+
+//This is for matchload not ready
+
 // Intake2.stop();
 // Piston2.set(true);
 // wait(.1,sec);
@@ -305,7 +314,7 @@ wait(3,sec);
 
 
 
-//BLUE RIGHT
+
 void Testing(){
 odom_constants();
 chassis.set_coordinates(-48,0,90);
