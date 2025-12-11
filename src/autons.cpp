@@ -134,6 +134,7 @@ void holonomic_odom_test(){
 //RED & BLUE RIGHT
 
 void Auton_RBRT(){
+  //6 Block Auton
 odom_constants();
 chassis.set_coordinates(-48,0,90);
 Intake.setVelocity(100,pct);
@@ -150,37 +151,121 @@ chassis.drive_max_voltage = 8;
 wait(.5,sec);
 
 chassis.turn_to_point(-41.8,-46.5,200); 
-// Piston2.set(false);
-chassis.drive_distance(-25.5); 
+chassis.drive_distance(-25); 
 wait(.1,sec);
-chassis.turn_to_point(-26,-46.6,90);
+chassis.turn_to_point(-26,-46.6,85); //90 deg
 wait(.1,sec);
+chassis.drive_max_voltage = 7;
 chassis.drive_distance(-15);
+chassis.drive_max_voltage = 8;
 
 //SCORE
 Intake.spin(fwd);
 Intake2.spin(fwd);
 
-wait(3,sec);
+wait(1.5,sec);  //2.5
+
+Intake2.stop();
+
+TM.set(true);
+wait(.6,sec);
+chassis.drive_max_voltage =7;    //Test voltage & distance where the robot doesnt ram too much or too little
+chassis.drive_distance(25);
+wait(.8,sec);
+chassis.drive_distance(-1);
+wait(.1,sec);
+chassis.drive_distance(6);
+chassis.drive_max_voltage =8;    //Test voltage & distance where the robot doesnt ram too much or too little
+
+wait(.2,sec);
+
+chassis.drive_distance(-25);
+Intake2.spin(fwd);
+wait(.1,sec);
+Intake.spin(fwd);
+Intake2.spin(fwd);
+wait(.8,sec);
+
 
 }
 
-//This is for matchload not ready
+void AutonDE(){
+//Descore Auton
 
-// Intake2.stop();
-// TM.set(true);
-// wait(.6,sec);
-// chassis.drive_max_voltage =6;    //Test voltage & distance where the robot doesnt ram too much or too little
-// chassis.drive_distance(24);
-// chassis.drive_max_voltage =8;    //Test voltage & distance where the robot doesnt ram too much or too little
+odom_constants();
+chassis.set_coordinates(-48,0,90);
+Intake.setVelocity(100,pct);
+Intake2.setVelocity(100,pct);
 
-// wait(2,sec);
-// chassis.drive_distance(-24);
-// Intake2.spin(fwd);
-// wait(.1,sec);
-// Intake.spin(fwd);
-// Intake2.spin(fwd);
-// chassis.drive_stop(brake);
+Piston1.set(true);
+chassis.drive_max_voltage = 5;
+Intake.spin(fwd);
+chassis.drive_timeout = 900;
+chassis.drive_distance(21);   
+chassis.drive_timeout = 1500;
+TM.set(true);
+chassis.drive_max_voltage = 8;
+wait(.5,sec);
+
+chassis.turn_to_point(-41.8,-46.5,203); 
+chassis.drive_distance(-25); 
+wait(.2,sec);
+chassis.turn_to_point(-26,-46.6,85); //90 deg
+wait(.1,sec);
+chassis.drive_max_voltage = 6;
+chassis.drive_distance(-15);
+chassis.drive_max_voltage = 8;
+wait(.1,sec);
+
+//SCORE
+Intake.spin(fwd);
+Intake2.spin(fwd);
+
+wait(1,sec);
+
+Intake2.stop();
+
+TM.set(true);
+wait(.1,sec);
+chassis.drive_max_voltage = 5;    //Test voltage & distance where the robot doesnt ram too much or too little
+chassis.drive_distance(26.5);
+
+chassis.drive_max_voltage = 8;    //Test voltage & distance where the robot doesnt ram too much or too little
+wait(.3,sec);
+
+Intake.stop();
+Intake2.stop();
+
+chassis.drive_distance(-15);
+chassis.turn_to_point(-41,-56,110);   
+chassis.drive_distance(-12);
+Piston1.set(false);
+chassis.turn_to_point(-11,-55,90); 
+wait(.1,sec);
+
+chassis.drive_max_voltage = 6;  
+
+chassis.drive_distance(-15);
+chassis.drive_stop(brake);
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //------------------------------------------
 //NOT TESTED AUTON 5

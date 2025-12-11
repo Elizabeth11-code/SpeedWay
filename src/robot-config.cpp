@@ -11,7 +11,7 @@ controller Controller1(primary);
 inertial Sensor(PORT10);
 
 motor Intake(PORT14,ratio6_1,true);
-motor Intake2(PORT6,ratio6_1,false);
+motor Intake2(PORT16,ratio6_1,false);
 
 
 

@@ -216,7 +216,7 @@ void autonomous(void) {
   auto_started = true;
   switch(current_auton_selection){ 
     case 0:
-      Auton_RBRT();
+      AutonDE();
       break;
     case 1:         
       Auton_RBLT();
@@ -258,15 +258,17 @@ void usercontrol(void) {
   while (1) {
 
 
-    if (Controller1.ButtonR1.pressing())
+     if (Controller1.ButtonR1.pressing())
     {
       Intake.spin(fwd,100,pct);
     }
-    else if (Controller1.ButtonR2.pressing())
+
+      else if (Controller1.ButtonR2.pressing())
     {
       Intake.spin(reverse,100,pct);
     }
-    else
+
+      else
     {
       Intake.stop();
     }

@@ -24,6 +24,7 @@ void Park();
 //RED & BLUE RIGHT
 void Auton_RBRT();
 void Auton_5();
+void AutonDE();
 
 //RED & BLUE LEFT
 void Auton_RBLT();
