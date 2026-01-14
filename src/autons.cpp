@@ -207,13 +207,13 @@ TM.set(true);
 chassis.drive_max_voltage = 8;
 wait(.5,sec);
 
-chassis.turn_to_point(-41.8,-46.5,203); 
-chassis.drive_distance(-25); 
+chassis.turn_to_point(-41.8,-46.5,207); //The angle aka 207, sometimes needs to be tuned so when the robot turns, it doesn't hit the long goal
+chassis.drive_distance(-27.5); 
 wait(.2,sec);
-chassis.turn_to_point(-26,-46.6,85); //90 deg
+chassis.turn_to_point(-26,-46.6,85); 
 wait(.1,sec);
 chassis.drive_max_voltage = 6;
-chassis.drive_distance(-15);
+chassis.drive_distance(-17);
 chassis.drive_max_voltage = 8;
 wait(.1,sec);
 
@@ -227,11 +227,11 @@ Intake2.stop();
 
 TM.set(true);
 wait(.1,sec);
-chassis.drive_max_voltage = 5;    //Test voltage & distance where the robot doesnt ram too much or too little
-chassis.drive_distance(26.5);
+chassis.drive_max_voltage = 6;    //Test voltage & distance where the robot doesnt ram too much or too little
+chassis.drive_distance(27.5);
 
 chassis.drive_max_voltage = 8;    //Test voltage & distance where the robot doesnt ram too much or too little
-wait(.3,sec);
+wait(.8,sec);
 
 Intake.stop();
 Intake2.stop();

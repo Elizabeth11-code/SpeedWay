@@ -189,19 +189,21 @@ TM.set(!TM.value());
     }
 
   
-    //.pressed(auton_switch);
-    //wait(1,sec);
-    /**
-    if(Brain.Screen.pressing()){
-      while(Brain.Screen.pressing()) {}
-      current_auton_selection ++;
-    } else if (current_auton_selection == 8){
-      current_auton_selection = 0;
-    }
-      */
+    // .pressed(auton_switch);
+    //  wait(1,sec);
+    
+    // if(Brain.Screen.pressing()){
+    //   while(Brain.Screen.pressing()) {}
+    //   current_auton_selection ++;
+    // } else if (current_auton_selection == 8){
+    //   current_auton_selection = 0;
+    // }
+  
+
     task::sleep(10);
   }
 }
+
 
 
 

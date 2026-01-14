@@ -13,20 +13,13 @@ inertial Sensor(PORT10);
 motor Intake(PORT14,ratio6_1,true);
 motor Intake2(PORT16,ratio6_1,false);
 
-
+//Pneumantics
 
 digital_out Piston1 = digital_out(Brain.ThreeWirePort.A);
 digital_out Piston2 = digital_out(Brain.ThreeWirePort.B);
 digital_out TM = digital_out(Brain.ThreeWirePort.C);
 
 
-
-// motor R1(PORT4,ratio6_1,false);
-// motor R2(PORT5,ratio6_1,false);
-// motor R3(PORT6 ,ratio6_1,false);
-// motor L1(PORT7,ratio6_1,true);
-// motor L2(PORT8,ratio6_1,true);
-// motor L3(PORT9,ratio6_1,true);
 
 motor R1(PORT4,ratio6_1,true);
 motor R2(PORT5,ratio6_1,false);
